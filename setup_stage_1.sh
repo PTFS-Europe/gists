@@ -48,4 +48,4 @@ echo "Done"
 ## say bye
 echo "We have gotten as far as we can! Please now ssh into the new user"
 echo "and run the following command to continue:"
-echo "$ wget -qO - https://raw.githubusercontent.com/PTFS-Europe/gists/main/setup_stage_2.sh | bash -"
+echo "$ wget -qO /tmp/ss2.sh https://raw.githubusercontent.com/PTFS-Europe/gists/main/setup_stage_2.sh?t=$(date +%s%N) ; bash '/tmp/ss2.sh'"
