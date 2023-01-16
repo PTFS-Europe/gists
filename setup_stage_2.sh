@@ -11,7 +11,7 @@ fi
 
 ## get scripts repo
 echo "Cloning temporary copy of scripts repo"
-git clone git@github.com:PTFS-Europe/gists.git ${HOME}/scripts
+git clone git@github.com:PTFS-Europe/scripts.git ${HOME}/scripts
 echo "Done"
 
 

@@ -28,13 +28,20 @@ echo "Done"
 
 ## get scripts repo
 echo "Cloning temporary copy of scripts repo"
-git clone git@github.com:PTFS-Europe/gists.git /tmp/scripts
+git clone git@github.com:PTFS-Europe/scripts.git /tmp/scripts
 echo "Done"
 
 
 ## pass on to setup_initial_user.sh
 echo "Passing on to setup_initial_user.sh"
 /tmp/scripts/sys/setup_initial_user.sh
+echo "Done"
+
+
+## tidyup
+echo "Tidying up /tmp"
+rm -rf /tmp/scripts
+echo "Done"
 
 
 ## say bye
