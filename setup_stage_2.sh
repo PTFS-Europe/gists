@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 SCRIPT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)" # get current script dir portibly
+EPOCH=$(date +%s%N)
 
 
 ## check we are sudo
