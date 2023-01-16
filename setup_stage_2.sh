@@ -3,41 +3,23 @@ SCRIPT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)" # get 
 
 
 ## check we are sudo
-if [[ "${EUID}" -ne 0 ]]; then
-	echo "Please run as root (or sudo)."
+if [[ "${EUID}" -eq 0 ]]; then
+	echo "Please run as non-privileged user"
 	exit 1
 fi
 
 
-## update apt repos
-echo "Updating and upgrading packages . . . "
-apt update >/dev/null 2>&1 ; apt upgrade -y
-echo "Done"
-
-
-## install base packages
-echo "Installing base packages . . . "
-apt update >/dev/null 2>&1 ; apt install -y \
-  git \
-  curl \
-  wget \
-  htop \
-  ncdu
-echo "Done"
-
-
 ## get scripts repo
 echo "Cloning temporary copy of scripts repo"
-git clone git@github.com:PTFS-Europe/gists.git /tmp/scripts
+git clone git@github.com:PTFS-Europe/gists.git ${HOME}/scripts
 echo "Done"
 
 
 ## pass on to setup_initial_user.sh
-echo "Passing on to setup_initial_user.sh"
-/tmp/scripts/sys/setup_initial_user.sh
+echo "Passing on to setup_initial_system.sh"
+sudo ${HOME}/scripts/sys/setup_initial_system.sh
 
 
 ## say bye
-echo "We have gotten as far as we can! Please now ssh into the new user"
-echo "and run the following command to continue:"
-echo "$ wget -qO - https://raw.githubusercontent.com/PTFS-Europe/gists/main/setup_stage_2.sh | bash -"
+echo "Done! Please now install the relevant application this server is intended"
+echo "to run."
