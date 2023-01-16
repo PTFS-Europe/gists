@@ -35,7 +35,7 @@ echo "Done"
 
 ## pass on to setup_initial_user.sh
 echo "Passing on to setup_initial_user.sh"
-/tmp/scripts/sys/setup_initial_user.sh
+bash -c '/tmp/scripts/sys/setup_initial_user.sh'
 echo "Done"
 
 
