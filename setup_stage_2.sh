@@ -18,7 +18,7 @@ echo "Done"
 
 ## pass on to setup_initial_user.sh
 echo "Passing on to setup_initial_system.sh"
-sudo ${HOME}/scripts/sys/setup_initial_system.sh
+sudo -E ${HOME}/scripts/sys/setup_initial_system.sh
 
 
 ## say bye
