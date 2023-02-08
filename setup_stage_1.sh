@@ -49,3 +49,12 @@ echo "Done"
 echo "We have gotten as far as we can! Please now ssh into the new user"
 echo "and run the following command to continue:"
 echo "$ wget -qO /tmp/ss2.sh https://raw.githubusercontent.com/PTFS-Europe/gists/main/setup_stage_2.sh?t=$(date +%s%N) ; sudo -E bash -E /tmp/ss2.sh"
+
+echo -ne "VERY IMPORTANT!\n"
+cat <<EOF
+  ___     _              _                     _ 
+ | _ \___| |__  ___  ___| |_   _ _  _____ __ _| |
+ |   / -_) '_ \/ _ \/ _ \  _| | ' \/ _ \ V  V /_|
+ |_|_\___|_.__/\___/\___/\__| |_||_\___/\_/\_/(_)
+                                                 
+EOF
