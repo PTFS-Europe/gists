@@ -49,7 +49,7 @@ echo "Done"
 ## say bye
 echo "We have gotten as far as we can! Please now ssh into the new user"
 echo "and run the following command to continue:"
-echo "$ wget -qO /tmp/ss2.sh https://raw.githubusercontent.com/PTFS-Europe/gists/main/setup_stage_2.sh?t=$(date +%s%N) ; sudo -E bash -E /tmp/ss2.sh"
+echo "$ wget -qO /tmp/ss2.sh https://raw.githubusercontent.com/PTFS-Europe/gists/main/setup_stage_2.sh?t=$(date +%s%N) ; bash -E /tmp/ss2.sh"
 
 echo -ne "VERY IMPORTANT!\n"
 cat <<EOF
